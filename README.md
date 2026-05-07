@@ -37,3 +37,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Extra Features
+
+- **Add to cart** — click any pizza to add it to your cart
+- **Server-side cart persistence** — cart state is stored in server memory and restored on page refresh
+- **Per-item subtotals** — each cart item shows quantity and running cost
+- **Unique item tracking** — adding the same pizza increments its count rather than duplicating it
