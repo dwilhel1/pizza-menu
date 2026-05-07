@@ -1,7 +1,17 @@
-import { pizzas } from "@/app/data/pizza";
+'use client';
+
 import { Pizza } from "@/app/types";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [pizzas, setPizzas] = useState<Pizza[]>([]);
+
+  useEffect(() => {
+    fetch('/api/pizzas')
+      .then((res: Response) => res.json())
+      .then((data: Pizza[]) => setPizzas(data));
+  }, []);
+
   return (
     <main className="p-8">
       <h1 className="text-3xl font-bold mb-6">🍕 Pizza Menu</h1>
